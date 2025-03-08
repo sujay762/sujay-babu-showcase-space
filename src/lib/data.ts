@@ -62,19 +62,29 @@ export const projects: Project[] = [
   {
     id: "health-connect",
     title: "Health Connect",
-    description: "An essential tool for healthcare professionals streamlining the process of patient care coordination",
-    tags: ["React", "Node.js", "MongoDB"],
-    image: "/lovable-uploads/placeholder.svg",
+    description: "An essential tool for healthcare professionals that streamlines access and ensures secure sharing of confidential patient health data, enhancing care coordination.",
+    tags: ["Python", "Flask", "IBM Cloud", "Docker", "RedHat"],
+    image: "/lovable-uploads/d11ecb23-f2f8-45fe-a357-c6457bd8b65d.png",
     github: "#",
-    url: "#"
+    url: "https://health-connect-project.com"
   },
   {
     id: "destination-changer",
     title: "Destination Changer",
-    description: "A web app that allows users to whitelists URLs and automates URL routing",
-    tags: ["TypeScript", "React", "Node.js"],
-    image: "/lovable-uploads/placeholder.svg", 
-    github: "#"
+    description: "A Web app that allows users to shorten URLs and track the number of clicks on the shortened URL. The app also provides a QR code for the shortened URL.",
+    tags: ["NextJS", "NodeJS", "MongoDB", "TailwindCSS", "Vercel"],
+    image: "/lovable-uploads/b97a0075-56ff-4bef-9550-1bdeba2afa16.png", 
+    github: "#",
+    url: "https://destination-changer.com"
+  },
+  {
+    id: "ayoohoo-family-health",
+    title: "Ayoohoo Family Health Game",
+    description: "Designed and developed a gamification platform promoting healthy habits in children through interactive gameplay, including daily challenges, rewards, and habit-tracking features. Drove rapid adoption, achieving 5,000 monthly active users within the first month.",
+    tags: ["AngularJS", "NodeJS", "MongoDB", "TailwindCSS", "AWS"],
+    image: "/lovable-uploads/20bb6c52-8eb8-4baf-8bb5-a6f86969b86b.png",
+    github: "#",
+    url: "https://games.ayoohoo.com"
   }
 ];
 

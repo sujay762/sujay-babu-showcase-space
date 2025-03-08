@@ -23,56 +23,76 @@ const Projects = () => {
   };
   
   return (
-    <div className="container-custom">
-      <div className="py-10 relative">
-        {/* Background elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-emerald-50 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-emerald-50 to-transparent"></div>
-          <div className="absolute top-1/3 right-10 w-20 h-20 border border-emerald-200 rounded-full opacity-50"></div>
-          <div className="absolute bottom-1/4 left-20 w-32 h-32 border border-teal-200 rounded-full opacity-30"></div>
-        </div>
+    <div className="container-custom py-20">
+      <div ref={ref} className="mb-16">
+        <h1 className={cn(
+          "text-4xl md:text-5xl font-bold mb-6 opacity-0 transform translate-y-4 transition-all duration-500 delay-100",
+          isVisible && "opacity-100 translate-y-0"
+        )}>
+          Things I've made trying to put my dent in the universe.
+        </h1>
         
-        <div ref={ref} className="mb-12 text-center">
+        <p className={cn(
+          "text-lg text-gray-600 max-w-3xl opacity-0 transform translate-y-4 transition-all duration-500 delay-200",
+          isVisible && "opacity-100 translate-y-0"
+        )}>
+          I've worked on many of little projects over the years but these are the ones that I'm most 
+          proud of. Some of these are open-source, so if you see something that piques your interest, 
+          check out the code and contribute if you have ideas for how it can be improved.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-16">
+        {projects.map((project, index) => (
           <div 
+            key={project.id}
             className={cn(
-              "inline-block py-1 px-3 rounded-full text-sm bg-gray-100 text-gray-600 mb-4 opacity-0 transform translate-y-4 transition-all duration-500",
-              isVisible && "opacity-100 translate-y-0"
+              "grid grid-cols-1 lg:grid-cols-3 gap-8 opacity-0 transform translate-y-8 transition-all duration-700",
+              isVisible && animatedItems[index] ? "opacity-100 translate-y-0" : ""
             )}
+            style={{ transitionDelay: `${index * 150}ms` }}
           >
-            My Work
+            <div className="lg:col-span-1">
+              <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            
+            <div className="lg:col-span-2 flex flex-col">
+              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+              <p className="text-gray-600 mb-5">{project.description}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-5">
+                {project.tags.map((tag, idx) => (
+                  <span 
+                    key={idx} 
+                    className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex gap-4 mt-auto">
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4 mr-1" />
+                    <span>{project.url.replace(/^https?:\/\/(www\.)?/, '')}</span>
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
-          
-          <h1 
-            className={cn(
-              "text-4xl font-bold opacity-0 transform translate-y-4 transition-all duration-500 delay-100",
-              isVisible && "opacity-100 translate-y-0"
-            )}
-          >
-            Things I've made
-          </h1>
-          
-          <p 
-            className={cn(
-              "text-xl text-gray-600 mt-4 max-w-2xl mx-auto opacity-0 transform translate-y-4 transition-all duration-500 delay-200",
-              isVisible && "opacity-100 translate-y-0"
-            )}
-          >
-            Here are some of my projects that showcase my skills and interests.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={project.id} 
-              project={project} 
-              isAnimated={isVisible && animatedItems[index]}
-              index={index}
-              onOpenDetails={handleOpenDetails}
-            />
-          ))}
-        </div>
+        ))}
       </div>
 
       {/* Project Details Dialog */}
@@ -93,7 +113,7 @@ const Projects = () => {
             <div className="mt-4">
               <div className="rounded-lg overflow-hidden mb-6 bg-gray-100">
                 <img 
-                  src={selectedProject.image || '/placeholder.svg'} 
+                  src={selectedProject.image} 
                   alt={selectedProject.title} 
                   className="w-full h-auto object-cover"
                 />
