@@ -20,40 +20,56 @@ export interface Experience {
   github?: string;
 }
 
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  location: string;
+  gpa?: string;
+}
+
+export const education: Education[] = [
+  {
+    institution: "SRKR Engineering College",
+    degree: "B-Tech in Computer Science and Design",
+    period: "2023-2026",
+    location: "Bhimavaram, Andhra Pradesh",
+    gpa: "8.21"
+  }
+];
+
 export const about = {
   skills: [
-    "React.js / Next.js",
-    "TypeScript / JavaScript",
-    "Node.js / Express",
-    "MongoDB / PostgreSQL",
-    "REST APIs / GraphQL",
-    "Tailwind CSS / SCSS",
-    "AWS / Cloud Services",
-    "CI/CD Pipelines"
+    "Python, JavaScript",
+    "React, Node.js, HTML5, CSS3",
+    "MongoDB, SQLite, MySQL",
+    "Frontend Design (Figma)",
+    "Cloud Deployment",
+    "Android Development (Kotlin)",
+    "Git & Version Control",
+    "RESTful APIs"
   ],
   experience: [
     {
-      position: "Software Developer",
-      company: "Inncircles",
-      period: "Oct 2023 - Present",
-      description: "Contributing to scalable microservices with Node.js, automated CI/CD pipelines, and built client onboarding platform.",
-      tags: ["Node.js", "React", "TypeScript"],
-      url: "https://inncircles.com",
-      github: "https://github.com/inncircles"
+      position: "Full-stack Developer",
+      company: "Wonderkids School Website",
+      period: "1OCT-1NOV",
+      description: "Developed and maintained web applications for students and educators. Utilized HTML, JavaScript, PHP, and SQL for responsive user interfaces and robust backends.",
+      tags: ["HTML", "JavaScript", "PHP", "SQL"],
     },
     {
-      position: "Software Developer Intern",
-      company: "Catalog.fi",
-      period: "Mar 2023 - Sept 2023",
-      description: "Contributed to the advancement of the crypto wallet through React.js, TypeScript, Node.js, Tailwind CSS.",
-      url: "https://catalog.fi"
+      position: "Python Full-stack Intern",
+      company: "IDTT Blackbucks",
+      period: "May 2024 - July 2024",
+      description: "Developed a notes-taking app using Python Django with CRUD operations. Designed a user-friendly interface for managing notes efficiently.",
+      tags: ["Python", "Django", "CRUD"],
     },
     {
-      position: "Backend Developer",
-      company: "Myally.ai",
-      period: "April - July 2023",
-      description: "Collaborated with the team to implement an automated accounting system, reducing manual workload by 90%.",
-      github: "https://github.com/myally-ai"
+      position: "Android Developer Virtual Internship",
+      company: "Google",
+      period: "OCT-DEC 2024",
+      description: "Gained hands-on experience in Android development using Kotlin and Java. Created a basic app using Android Studio.",
+      tags: ["Android", "Kotlin", "Java"]
     }
   ]
 };
