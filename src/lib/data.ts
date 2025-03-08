@@ -37,19 +37,23 @@ export const about = {
       company: "Inncircles",
       period: "Oct 2023 - Present",
       description: "Contributing to scalable microservices with Node.js, automated CI/CD pipelines, and built client onboarding platform.",
-      tags: ["Node.js", "React", "TypeScript"]
+      tags: ["Node.js", "React", "TypeScript"],
+      url: "https://inncircles.com",
+      github: "https://github.com/inncircles"
     },
     {
       position: "Software Developer Intern",
       company: "Catalog.fi",
       period: "Mar 2023 - Sept 2023",
-      description: "Contributed to the advancement of the crypto wallet through React.js, TypeScript, Node.js, Tailwind CSS."
+      description: "Contributed to the advancement of the crypto wallet through React.js, TypeScript, Node.js, Tailwind CSS.",
+      url: "https://catalog.fi"
     },
     {
       position: "Backend Developer",
       company: "Myally.ai",
       period: "April - July 2023",
-      description: "Collaborated with the team to implement an automated accounting system, reducing manual workload by 90%."
+      description: "Collaborated with the team to implement an automated accounting system, reducing manual workload by 90%.",
+      github: "https://github.com/myally-ai"
     }
   ]
 };
