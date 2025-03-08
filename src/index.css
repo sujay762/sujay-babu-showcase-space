@@ -79,6 +79,16 @@
   }
 }
 
+@layer components {
+  .glass-panel {
+    @apply bg-white/80 border border-gray-200 shadow-sm backdrop-blur-sm;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+}
+
 .font-inter {
   font-family: 'Inter', sans-serif;
 }
