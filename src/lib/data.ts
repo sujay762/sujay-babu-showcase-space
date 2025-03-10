@@ -56,6 +56,8 @@ export const about = {
       period: "1OCT-1NOV",
       description: "Developed and maintained web applications for students and educators. Utilized HTML, JavaScript, PHP, and SQL for responsive user interfaces and robust backends.",
       tags: ["HTML", "JavaScript", "PHP", "SQL"],
+      url: "https://wonderkids.example.com",
+      github: "https://github.com/example/wonderkids"
     },
     {
       position: "Python Full-stack Intern",
@@ -63,13 +65,17 @@ export const about = {
       period: "May 2024 - July 2024",
       description: "Developed a notes-taking app using Python Django with CRUD operations. Designed a user-friendly interface for managing notes efficiently.",
       tags: ["Python", "Django", "CRUD"],
+      url: "https://blackbucks.example.com",
+      github: "https://github.com/example/notes-app"
     },
     {
       position: "Android Developer Virtual Internship",
       company: "Google",
       period: "OCT-DEC 2024",
       description: "Gained hands-on experience in Android development using Kotlin and Java. Created a basic app using Android Studio.",
-      tags: ["Android", "Kotlin", "Java"]
+      tags: ["Android", "Kotlin", "Java"],
+      url: "https://android.example.com",
+      github: "https://github.com/example/android-app"
     }
   ]
 };
